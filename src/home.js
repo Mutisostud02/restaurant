@@ -29,7 +29,7 @@ export default function pageLoad () {
     //contentSide div contains header
     const header = document.createElement('h1');
     header.setAttribute('style','height: 8vh; margin-top:0; margin-right:0; margin-bottom:0;color:white; background-color:#475569;padding:2vh 0 2vh 30%;');
-    header.textContent = "PICKLE BERRY RESTAURANT";
+    header.textContent = "PICKLE BURGER RESTAURANT";
     contentSide.appendChild(header);
 
     //contentSide div contains a div(contentDivs) with image and contents in multiple divs
@@ -38,18 +38,33 @@ export default function pageLoad () {
     //contents in the contentDivs
     const imageDiv = document.createElement('div');
     imageDiv.classList.add('imageDiv');
-    imageDiv.setAttribute('style','height:70vh;background-size:cover;')
+    imageDiv.setAttribute('style','height:75vh;background-size:cover;')
     contentDivs.appendChild(imageDiv);
     const div1 = document.createElement('div');
+    const div1Paragraph = document.createElement('p');
+    div1Paragraph.setAttribute('style','color:black; width:50vw;font-family:helvetica;font-size:1.4rem;')
+    div1Paragraph.innerHTML = "Pickle Berry Burger is a place where you can chill out and n\
+     enjoy your burger and many other snacky and fast foods offered. You can also order our food straight from your n\
+     house and it will be delivered in the specified time. It is prepared through a collective of 5 separate ingredients that make n\
+     up one of the sweetest burgers you'll come across. The ingredients are bread, cheese, fresh kales, egg yolk and sausage meat.";
+    div1.appendChild(div1Paragraph);
+    div1.setAttribute('style','height:10rem;background-color:#e7e5e4;padding:5rem;padding-left:12rem;padding-bottom:7rem;')
     contentDivs.appendChild(div1);
     const div2 = document.createElement('div');
+    const div2Paragraph = document.createElement('p');
+    div2Paragraph.innerHTML = 'We are open from Monday to Saturday'
+    div2.appendChild(div2Paragraph);
+    const div2Paragraph2 = document.createElement('p');
+    div2Paragraph2.innerHTML = 'Weekdays from 10am to 6am';
+    div2.appendChild(div2Paragraph2);
+    div2.setAttribute('style','height:10rem;background-color:#ede9fe;padding:3rem;padding-left:20rem;font-family:helvetica;font-size:1.4rem;font-weight:500;')
     contentDivs.appendChild(div2);
     const div3 = document.createElement('div');
     contentDivs.appendChild(div3);
     contentSide.appendChild(header);
     contentSide.appendChild(contentDivs);
-    contentDivs.setAttribute('style','height:90vh;margin:0; background-color:#cbd5e1;margin:0;')
-    contentSide.setAttribute('style','width:80vw; display:flex; margin:0; flex-direction:column; gap:0.3vh;margin:0;');
+    contentDivs.setAttribute('style','height:90%;margin:0; background-color:#cbd5e1;margin:0;')
+    contentSide.setAttribute('style','width:80vw; display:flex; margin:0; flex-direction:column; height:auto; gap:0.3vh;margin:0;');
 
     contentHolder.appendChild(sidebar);
     contentHolder.appendChild(contentSide)
