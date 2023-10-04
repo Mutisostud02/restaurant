@@ -2,3 +2,17 @@
     background: url('./food.jpg');
     background-position: center;
 }
+.imageMenu {
+    background: url('./menu.jpg');
+    background-position: center;
+}
+.div1Img {
+    background: url('./cheese.jpg');
+    
+}
+.div2Img {
+    background: url('./cherry.jpg');
+}
+.div3Img {
+    background: url('./hotdog.jpg');
+}
