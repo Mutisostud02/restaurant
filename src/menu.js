@@ -1,11 +1,11 @@
 //contentSide div contains header
-    export function header () {
+    export const header = (function () {
         const header = document.createElement('h1');
         header.setAttribute('style','height: 8vh; margin-top:0; margin-right:0; margin-bottom:0;color:white; background-color:#475569;padding:2vh 0 2vh 30%;');
         header.innerHTML = "PICKLE BURGER MENU";
         return header;
-    }
-    export function menuTabPage () {   
+    })();
+    export const  menuTabPage = (function () {   
     //two divs left and right,left =sidebar right = contentSide
         function imageMenu () {
             const imageMenu = document.createElement('div');
@@ -97,7 +97,7 @@
         contentDivsHolder.setAttribute('style','height:90%;margin:0; background-color:#cbd5e1;margin:0;');
         return contentDivsHolder;
         
-    }
+    })();
 
     
 
