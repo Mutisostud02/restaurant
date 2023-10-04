@@ -1,9 +1,14 @@
-import home from './home';
-import {menuTabPage as menuContent} from './menu';
-import {header as head} from './menu';
+import home from './home.js';
+import {menuTabPage as menuContent} from './menu.js';
+import {header as head} from './menu.js';
+import { contactTabPage } from './contacts.js';
+import { contactHeader } from './contacts.js';
+
 import './styles.css';
 
-const content = document.querySelector('.content');
+const content = document.createElement('div');
+content.classList.add('content');
+document.body.appendChild(content);
 content.setAttribute('style','overflow:hidden;height:100vh;margin:0;')
 window.onload = content.appendChild(home());
 const contentSide = document.querySelector('.contentSide');
@@ -15,13 +20,52 @@ const header = document.querySelector('.header');
 const menuTab = document.querySelector('.menu');
 menuTab.setAttribute('style','margin-bottom:5vh;')
 menuTab.addEventListener('click',()=> {
+    if (contentSide.hasChildNodes(contactHeader) === true && contentSide.hasChildNodes(contactTabPage) === true){
+        contactHeader.remove();
+        contactTabPage.remove();
+        contentSide.appendChild(head);
+        contentSide.appendChild(menuContent);
+
+    } 
     header.remove();
     contentDivs.remove();
-    contentSide.appendChild(head());
-    contentSide.appendChild(menuContent())
+    contentSide.appendChild(head);
+    contentSide.appendChild(menuContent)
 
-}, {once: true});
+});
 
+const contactTab = document.querySelector('.contacts');
+contactTab.addEventListener('click', () => {
+    if (contentSide.hasChildNodes(head) === true && contentSide.hasChildNodes(contentDivs) === true){
+        header.remove();
+        contentDivs.remove();
+        contentSide.appendChild(contactHeader);
+        contentSide.appendChild(contactTabPage);
+
+    } 
+    head.remove();
+    menuContent.remove();
+    contentSide.appendChild(contactHeader);
+    contentSide.appendChild(contactTabPage);
+})
+
+
+
+const homeTab = document.querySelector('.home');
+homeTab.setAttribute('style','margin-bottom:5vh;');
+homeTab.addEventListener('click',()=> {
+    if (contentSide.hasChildNodes(contactHeader) === true && contentSide.hasChildNodes(contactTabPage) === true){
+        contactHeader.remove();
+        contactTabPage.remove();
+        contentSide.appendChild(header);
+        contentSide.appendChild(contentDivs);
+
+    } 
+    head.remove();
+    menuContent.remove();
+    contentSide.appendChild(header);
+    contentSide.appendChild(contentDivs);
+})
 
 
 // .addEventListener('click',() => {
