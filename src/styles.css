@@ -1,18 +1,22 @@
 .imageDiv {
-    background: url('./food.jpg');
-    background-position: center;
+  background: url("./food.jpg");
+  background-position: center;
+  loading: lazy;
 }
 .imageMenu {
-    background: url('./menu.jpg');
-    background-position: center;
+  background: url("./menu.jpg");
+  background-position: center;
+  loading: lazy;
 }
 .div1Img {
-    background: url('./cheese.jpg');
-    
+  background: url("./cheese.jpg");
+  loading: lazy;
 }
 .div2Img {
-    background: url('./cherry.jpg');
+  background: url("./cherry.jpg");
+  loading: lazy;
 }
 .div3Img {
-    background: url('./hotdog.jpg');
+  background: url("./hotdog.jpg");
+  loading: lazy;
 }
